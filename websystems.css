@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #CDDAFD;
+    --accent-color: #A594F9;
+    --background-color: #F0EFEB;
+    --darkening: linear-gradient(rgb(0,0,0,0.35),rgb(0,0,0,0.35));
+}
+
+/* fonts */
+@font-face {
+    font-family: "Inter";
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("fonts/Inter-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url("fonts/Inter-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    src: url("fonts/Inter-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+    font-family: "Inter Tight";
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("fonts/InterTight-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "JetBrains Mono";
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/JetBrainsMono-Regular.woff2");
+}
+
+/* general */
+html { scroll-behavior: smooth; }
+body {
+    margin: 0rem;
+    padding: 0rem;
+    font-family: "Inter";
+    background-color: var(--background-color);
+}
+.page { 
+    margin: 0.5rem 1rem; 
+}
+
+/* navigation bar */
+nav {
+    position: static;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+}
+nav a {
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 1vh 1vh;
+    font-family: "Inter Tight";
+}
+nav .selected { background-color: var(--primary-color); }
+
+/* banner */
+.banner {
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.banner h1 { 
+    font-family: "Inter Tight";
+    color: white; 
+}
+.banner#past { 
+    background-image: var(--darkening), url("images/banner-past.jpg"); 
+    background-position: 50% 55%;
+}
+.banner#future {
+    background-image: var(--darkening), url("images/banner-future.jpg");
+    background-position: 50% 90%;
+}
+.banner#comments {
+    background-image: var(--darkening), url("images/banner-comments.jpg");
+    background-position: 50% 20%;
+}
+
+/* markdown formatting */
+code {
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+code pre {
+    margin: 0rem;
+    font-family: "JetBrains Mono";
+    font-size: 14px;
+}
+h1, h2, h3 {
+    margin-bottom: 0rem;
+}
+h1 {
+    font-size: 1.875rem;
+    margin-top: 1.875rem;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+}
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* profile */
+.profile {
+    display: flex;
+}
+.profile .sidebar {
+    width: 30%;
+    margin-right: 0.5rem
+}
+.profile .sidebar img {
+    border-radius: 50%;
+    width: 100%;
+}
+.profile .readme {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 0.5rem;
+}
+.profile .readme .filename {
+    font-family: "JetBrains Mono";
+    font-size: 0.75rem;
+}
+
+table { 
+    text-align: left; 
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 0.25rem;
+}
+
+.inter { font-family: "Inter"; }
+.inter-tight { font-family: "Inter Tight"; }
+.jetbrains-mono { font-family: "JetBrains Mono"; }
