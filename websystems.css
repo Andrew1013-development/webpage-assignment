@@ -1,15 +1,17 @@
+/* ===== COLOR PALATTE ===== */
 :root {
-    --primary-color: #CDDAFD;
-    --accent-color: #A594F9;
-    --background-color: #F0EFEB;
+    --primary-color: #773344;
+    --secondary-color: #E3B5A4;
+    --background-color: #F5E9E2;
+    --footer-color: #3A3335;
     --darkening: linear-gradient(rgb(0,0,0,0.35),rgb(0,0,0,0.35));
 }
 
-/* fonts */
+/* ===== CUSTOM FONTS ===== */
 @font-face {
     font-family: "Inter";
     font-optical-sizing: auto;
-    font-weight: normal;
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
     src: url("fonts/Inter-VariableFont_opsz\,wght.ttf");
@@ -17,15 +19,7 @@
 @font-face {
     font-family: "Inter";
     font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-    src: url("fonts/Inter-VariableFont_opsz\,wght.ttf");
-}
-@font-face {
-    font-family: "Inter";
-    font-optical-sizing: auto;
-    font-weight: normal;
+    font-weight: 100 900;
     font-style: italic;
     font-display: swap;
     src: url("fonts/Inter-Italic-VariableFont_opsz\,wght.ttf");
@@ -45,7 +39,7 @@
     src: url("fonts/JetBrainsMono-Regular.woff2");
 }
 
-/* general */
+/* ===== PAGE FORMATTING ===== */
 html { scroll-behavior: smooth; }
 body {
     margin: 0rem;
@@ -53,69 +47,43 @@ body {
     font-family: "Inter";
     background-color: var(--background-color);
 }
-.page { 
-    margin: 0.5rem 1rem; 
+.page { padding: 0.5rem 1rem; }
+.page#past, .page#future, .page#comments {
+    margin: 0 auto;
+    max-width: 768px;
 }
-
-/* navigation bar */
-nav {
-    position: static;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    width: 100%;
+figcaption {
+    font-family: "Inter";
+    font-style: italic;
+    font-size: 0.625rem;
 }
-nav a {
-    flex-grow: 1;
+footer {
+    padding: 1rem 0;
     text-align: center;
-    text-decoration: black;
-    padding: 1vh 1vh;
-    font-family: "Inter Tight";
+    background-color: var(--footer-color);
 }
-nav .selected { background-color: var(--primary-color); }
-
-/* banner */
-.banner {
-    height: 40vh;
-    width: 100%;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.banner h1 { 
-    font-family: "Inter Tight";
+footer p { 
+    margin: 0;
     color: white; 
 }
-.banner#past { 
-    background-image: var(--darkening), url("images/banner-past.jpg"); 
-    background-position: 50% 55%;
-}
-.banner#future {
-    background-image: var(--darkening), url("images/banner-future.jpg");
-    background-position: 50% 90%;
-}
-.banner#comments {
-    background-image: var(--darkening), url("images/banner-comments.jpg");
-    background-position: 50% 20%;
-}
 
-/* markdown formatting */
+/* ===== CONTENT FORMATTING (inspired by Markdown) ===== */ 
+/* inline code snippets */
 code {
     display: inline-block;
-    padding: 1rem;
-    border: 1px solid black;
     border-radius: 0.5rem;
+    padding: 1vh 1vh;
+    background-color: white;
 }
+/* block code snippets (spanning multiple lines of code) */
 code pre {
     margin: 0rem;
     font-family: "JetBrains Mono";
     font-size: 14px;
+    padding: 1rem 0.75rem;
 }
-h1, h2, h3 {
-    margin-bottom: 0rem;
-}
+b, a { color: var(--primary-color); }
+h1, h2, h3 { margin-bottom: 0rem; }
 h1 {
     font-size: 1.875rem;
     margin-top: 1.875rem;
@@ -132,11 +100,65 @@ p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+table { 
+    text-align: left; 
+    border-collapse: collapse;
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 0.25rem;
+}
+img { width: 100%; }
+
+/* ===== CUSTOM ELEMENTS ===== */
+/* navigation bar */
+nav {
+    position: static;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+}
+nav a {
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 1vh 1vh;
+    font-family: "Inter Tight";
+}
+nav .selected { background-color: var(--secondary-color); }
+
+/* banner */
+.banner {
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.banner h1 { 
+    font-family: "Inter Tight";
+    color: white; 
+}
+.past-banner { 
+    background-image: var(--darkening), url("images/banner-past.jpg"); 
+    background-position: 50% 55%;
+}
+.future-banner {
+    background-image: var(--darkening), url("images/banner-future.jpg");
+    background-position: 50% 90%;
+}
+.comments-banner {
+    background-image: var(--darkening), url("images/banner-comments.jpg");
+    background-position: 50% 20%;
+}
 
 /* profile */
-.profile {
-    display: flex;
-}
+.profile { display: flex; }
 .profile .sidebar {
     width: 30%;
     margin-right: 0.5rem
@@ -157,15 +179,112 @@ p {
     font-size: 0.75rem;
 }
 
-table { 
-    text-align: left; 
-    border-collapse: collapse;
+/* gallery */
+.gallery h1 { 
+    text-align: center; 
+    border-bottom: 1px solid black;
 }
-table, th, td {
-    border: 1px solid black;
-    padding: 0.25rem;
+.gallery .container { 
+    columns: 2; 
+    column-gap: 0;
+}
+.gallery .container figure { display: inline-block; }
+.gallery .container figure > * { width: 100%; }
+.gallery .container figure code pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
+/* timeline */
+.timeline { position: relative; }
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: green;
+}
+.timeline .card { margin-left: 1rem; }
+.timeline .card .heading {
+    display: inline-flex;
+    align-items: center;
+}
+.timeline .card .heading .trigger {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    translate: -1.25rem 0;
+    background-color: black;
+}
+.timeline .card .heading p {
+    margin: 0 0.5rem;
+    translate: -1.25rem 0;
+    font-weight: bold;
+}
+.timeline .card .details { font-weight: 200; }
+
+/* group */
+.group { columns: 3; }
+.group figure { 
+    margin: 0; 
+    display: inline-block;
+}
+.group figure img { width: 100%; }
+.group figure figcaption { padding-bottom: 0.5rem; }
+
+/* palette */
+.palette { 
+    height: 150px;
+    margin: 0 auto;
+    columns: 4;
+    column-gap: 0;
+    border: 1px solid black;
+}
+.palette > * {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.palette p { margin: 0; }
+
+/* ==== SINGLY DEFINED CLASSES ===== */
+/* color */
+.primary { 
+    background-color: var(--primary-color); 
+    color: white;
+}
+.secondary { background-color: var(--secondary-color); }
+.background { background-color: var(--background-color); }
+.footer {
+    background-color: var(--footer-color);
+    color: white;
+}
+/* font */
 .inter { font-family: "Inter"; }
 .inter-tight { font-family: "Inter Tight"; }
 .jetbrains-mono { font-family: "JetBrains Mono"; }
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .profile .sidebar, .profile .readme {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .profile .sidebar img {
+        width: 33%;
+        max-width: 192px; /* 25% of the maximum width */
+        display: block;
+        margin: 0 auto;
+    }
+    .group { columns: 2; }
+    .gallery .container { columns: 1; }
+}

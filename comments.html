@@ -7,13 +7,15 @@
         <title>Comments</title>
     </head>
     <body>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="past.html">My Past</a>
-            <a href="future.html">My Future</a>
-            <a class="selected" href="comments.html">Comments</a>
-        </nav>
-        <div class="banner" id="comments">
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="past.html">My Past</a>
+                <a href="future.html">My Future</a>
+                <a class="selected" href="comments.html">Comments</a>
+            </nav>
+        </header>
+        <div class="banner comments-banner">
             <h1>Comments</h1>
         </div>
         <div class="page" id="comments">
@@ -63,12 +65,44 @@
             </table>
             
             <h1>&sect;2. Structuring the Webpages</h1>
+            <figure>
+                <img src="images/comments/page-structure.png">
+                <figcaption>Figure 1. Page structure</figcaption>
+            </figure>
             <h2>a. HTML structure</h2>
-            <h2>b. CSS structure</h2>
+            <code>&lt;!DOCTYPE html&gt;</code>
+            <code>&lt;head&gt;</code>
+            <code>&lt;body&gt;</code>
+            <code>&lt;header&gt;</code>
+            <code>&lt;div class="banner"&gt;</code>
+            <code>&lt;div class="page"&gt;</code>
+            <code>&lt;footer&gt;</code>
             
-            <h1>&sect;3. Defining the Aesthetics</h1>
+            <h2>b. CSS structure</h2>
+            <p>oh my god i wanna die with this one</p>
+            
+            <h1>&sect;3. Aesthetics</h1>
             <h2>a. Layout & Effect</h2>
+            
             <h2>b. Design</h2>
+            <figure>
+                <div class="palette">
+                    <div class="primary">
+                        <p>#773344<br>Wine</p>
+                    </div>
+                    <div class="secondary">
+                        <p>#E3B5A4<br>Pale Dogwood</p>
+                    </div>
+                    <div class="background">
+                        <p>#F5E9E2<br>Linen</p>
+                    </div>
+                    <div class="footer">
+                        <p>#3A3335<br>Jet</p>
+                    </div>
+                </div>
+                <figcaption>Figure 2. Color palette used by the webpages</figcaption>
+            </figure>
+            
             <h2>c. Typography</h2>
             <p>This website uses a total of 3 fonts for various purposes:</p>
             <table>
@@ -97,11 +131,26 @@
                     </tr>
                 </tbody>
             </table>
-            <h2>d. Spacing</h2>
 
             <h1>&sect;4. Addressing Accessibility</h1>
-            <h1>&sect;5. Many Rounds of Testing</h1>
-            <h1>&sect;6. Inspirations, References and Citations</h1>
+            <h2>Responsive Design</h2>
+            <h2>The <code>&lt;alt&gt;</code> tag</h2>
+            <h2>Accessibility features</h2>
+            
+            <h1>&sect;5. Rounds of Testing</h1>
+            <h2>Local end-to-end testing</h2>
+            <h2>Validation</h2>
+            <p>HTML / CSS validators</p>
+            <p>Accessibility validators</p>
+            <p>EdSTEM submission checker</p>
+            <h2>Live testing</h2>
+            <p>URL: <a href="https://andrew1013-development.github.io/webpage-assignment/">https://andrew1013-development.github.io/webpage-assignment/</a></p>
+            <p>Repository: <a href="https://github.com/Andrew1013-development/webpage-assignment">https://github.com/Andrew1013-development/webpage-assignment</a></p>
+            
+            <h1>&sect;6. Inspirations and References</h1>
         </div>
+        <footer>
+            <p>&copy;2025 Tran Viet Huy</p>
+        </footer>
     </body>
 </html>

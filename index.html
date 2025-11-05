@@ -7,18 +7,20 @@
         <title>Home</title>
     </head>
     <body>
-        <nav>
-            <a class="selected" href="index.html">Home</a>
-            <a href="past.html">My Past</a>
-            <a href="future.html">My Future</a>
-            <a href="comments.html">Comments</a>
-        </nav>
+        <header>
+            <nav>
+                <a class="selected" href="index.html">Home</a>
+                <a href="past.html">My Past</a>
+                <a href="future.html">My Future</a>
+                <a href="comments.html">Comments</a>
+            </nav>
+        </header>
         <div class="page">
             <div class="profile">
                 <div class="sidebar">
                     <img src="images/profile.jpg">
                     <h2>Tran Viet Huy</h2>
-                    <p>Andrew1013 · he/him</p>
+                    <p>Andrew1013 &middot; he/him</p>
                     <p><i>"I know all Linux users secretly crave to install Windows 11 but I can't quite prove it" - FaceDev</i></p>
                 </div>
                 <div class="readme">
@@ -37,8 +39,10 @@
                             <li>Homelabbing (<a href="https://itbible.org/homelabbing-for-beginners-break-things-learn-things-and-have-fun/" target="_blank">this</a> will be a good read on what "homelabbing" is)</li>
                             <li>Gaming</li>
                         </ul>
-                        <h3>Technologies</h3>
+                        <p>Visit <a href="#gallery">The Gallery of Hobbies</a> for more details.</p>
+                        <h3>Technical Skills</h3>
                         <ul>
+                            <li>Programming languages: Python, C/C++, C#, Java, JavaScript</li>
                             <li>App Development: WinUI 3 (Windows 11), Flutter (cross-platform)</li>
                             <li>
                                 Web Development
@@ -48,9 +52,65 @@
                                 </ul>
                             </li>
                             <li>Microcontrollers: Arduino, ESP32</li>
-                            <li>Server Administration: Portainer (Docker), Ubuntu Server</li>
+                            <li>Server Administration: Landscape (Ubuntu Server), Azure Arc (Windows Server), Portainer (Docker)</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div class="gallery" id="gallery">
+                <h1>The Gallery of Hobbies</h1>
+                <div class="container">
+                    <figure>
+                        <code><pre>
+#include &lt;bits/stdc++.h&gt;
+#define file_io(f_in,f_out) freopen(f_in,&quot;r&quot;,stdin);freopen(f_out,&quot;w&quot;,stdout)
+#define optimize_io() ios_base::sync_with_stdio(false);cin.tie(NULL)
+#define setup_io(prec) cout&lt;&lt;fixed&lt;&lt;setprecision(prec)
+#define bit(mask,pos) ((mask&gt;&gt;pos)&amp;1)
+#define MOD 1000000007
+#define INV_MOD 500000004 // modular inverse of 2
+#define endl &#39;\n&#39;
+using namespace std;
+typedef long long LL;
+typedef unsigned long long ULL;
+typedef long double LD;
+
+// use modular inverse to do modular division (ok what)
+LL CSC_sum(LL start, LL end) {
+    return (((end - start + 1) % MOD) * ((end + start) % MOD) % MOD) * INV_MOD % MOD;
+}
+int main() {
+    LL n,divisor = 1,cnt,last_same,res = 0;
+    
+    cin &gt;&gt; n;
+    while (divisor &lt;= n) {
+        cnt = n / divisor;
+        last_same = n / cnt;
+        res += ((cnt % MOD) * (CSC_sum(divisor, last_same) % MOD)) % MOD;
+        res %= MOD;
+        divisor = last_same + 1;
+    }
+    cout &lt;&lt; res;
+    return 0;
+}
+                        </pre></code>
+                        <figcaption>My solution for Sums of Divisors - CSES in C++20</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/home/gaming.jpg">
+                        <figcaption>Ace Combat 7 - Mission 8: Pipeline Destruction</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/home/homelab.png">
+                        <figcaption>My home server's OS (output from neofetch)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/home/web-dev.png">
+                        <figcaption>
+                            One of my first attempts at web development (displayed on Firefox)<br>
+                            <a href="https://andrew1013-development.github.io/canh-dep-viet-nam/">URL</a> | <a href="https://github.com/Andrew1013-development/canh-dep-viet-nam">GitHub Repository</a>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
