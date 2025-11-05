@@ -28,7 +28,7 @@
     font-weight: normal;
     font-style: italic;
     font-display: swap;
-    src: url("fonts/Inter-VariableFont_opsz\,wght.ttf");
+    src: url("fonts/Inter-Italic-VariableFont_opsz\,wght.ttf");
 }
 @font-face {
     font-family: "Inter Tight";
@@ -68,7 +68,7 @@ nav {
 nav a {
     flex-grow: 1;
     text-align: center;
-    text-decoration: none;
+    text-decoration: black;
     padding: 1vh 1vh;
     font-family: "Inter Tight";
 }
