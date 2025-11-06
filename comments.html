@@ -15,142 +15,426 @@
                 <a class="selected" href="comments.html">Comments</a>
             </nav>
         </header>
-        <div class="banner comments-banner">
-            <h1>Comments</h1>
-        </div>
-        <div class="page" id="comments">
-            <h1>&sect;1. Architecting the Website</h1>
-            <p>In accordance with the UTS's Webpage Assignment's specifications, my website has 4 webpages and 1 CSS stylesheet, laid out as follows:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>File name</th>
-                        <th>Title</th>
-                        <th>File type</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>index.html</td>
-                        <td>Home</td>
-                        <td>HTML Document</td>
-                        <td>Introduction of myself</td>
-                    </tr>
-                    <tr>
-                        <td>past.html</td>
-                        <td>My Past</td>
-                        <td>HTML Document</td>
-                        <td>About my past</td>
-                    </tr>
-                    <tr>
-                        <td>future.html</td>
-                        <td>My Future</td>
-                        <td>HTML Document</td>
-                        <td>About my future</td>
-                    </tr>
-                    <tr>
-                        <td>comments.html</td>
-                        <td>Comments</td>
-                        <td>HTML Document</td>
-                        <td>Comments regarding the design of the webpages</td>
-                    </tr>
-                    <tr>
-                        <td>websystems.css</td>
-                        <td>N/A</td>
-                        <td>CSS Stylesheet</td>
-                        <td>Styling for the entire website</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h1>&sect;2. Structuring the Webpages</h1>
-            <figure>
-                <img src="images/comments/page-structure.png">
-                <figcaption>Figure 1. Page structure</figcaption>
-            </figure>
-            <h2>a. HTML structure</h2>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code>&lt;head&gt;</code>
-            <code>&lt;body&gt;</code>
-            <code>&lt;header&gt;</code>
-            <code>&lt;div class="banner"&gt;</code>
-            <code>&lt;div class="page"&gt;</code>
-            <code>&lt;footer&gt;</code>
-            
-            <h2>b. CSS structure</h2>
-            <p>oh my god i wanna die with this one</p>
-            
-            <h1>&sect;3. Aesthetics</h1>
-            <h2>a. Layout & Effect</h2>
-            
-            <h2>b. Design</h2>
-            <figure>
-                <div class="palette">
-                    <div class="primary">
-                        <p>#773344<br>Wine</p>
+        <main>
+            <div class="banner comments-banner">
+                <h1>Comments</h1>
+            </div>
+            <div class="page" id="comments">
+                <section>
+                    <h1>&sect;1. Architecting the Website</h1>
+                    <p>In accordance with the UTS's Webpage Assignment's specifications, my website has 4 webpages and 1 CSS stylesheet, laid out as follows:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>File name</th>
+                                <th>Title</th>
+                                <th>File type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>index.html</td>
+                                <td>Home</td>
+                                <td>HTML Document</td>
+                                <td>Introduction of myself</td>
+                            </tr>
+                            <tr>
+                                <td>past.html</td>
+                                <td>My Past</td>
+                                <td>HTML Document</td>
+                                <td>About my past</td>
+                            </tr>
+                            <tr>
+                                <td>future.html</td>
+                                <td>My Future</td>
+                                <td>HTML Document</td>
+                                <td>About my future</td>
+                            </tr>
+                            <tr>
+                                <td>comments.html</td>
+                                <td>Comments</td>
+                                <td>HTML Document</td>
+                                <td>Comments regarding the design of the webpages</td>
+                            </tr>
+                            <tr>
+                                <td>websystems.css</td>
+                                <td>N/A</td>
+                                <td>CSS Stylesheet</td>
+                                <td>Styling for the entire website</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h1>&sect;2. Structuring the Webpages</h1>
+                    <figure>
+                        <img src="images/comments/page-structure.png" alt="Diagram of the website's general page structure, showing the header, banner, main content area, and footer.">
+                        <figcaption>Figure 1. General page structure (shown on "My Future" page)</figcaption>
+                    </figure>
+                    <h2>a. HTML structure</h2>
+                    <p><code>&lt;!DOCTYPE html&gt;</code>: Defines the document type (HTML5 Document), ensuring compliance with the HTML specification when rendering on a browser.</p>
+                    <p>
+                        <code>&lt;html&gt;</code>: 
+                        Denotes the beginning and the end of the HTML document.
+                    </p>
+                    <p>
+                        <code>&lt;head&gt;</code>: 
+                        Contains relevant metadata about the document, such as character set, viewport settings, page information and linking to external resources such as CSS stylesheets and JS scripts (not used for this assignment).
+                        This section also contains the <code>&lt;title&gt;</code> element, which provide the title of the page that is shown in the browser's tab preview.                        
+                    </p>
+                    <p>
+                        <code>&lt;body&gt;</code>: 
+                        Contains the actual contents of the document, namely what will be rendered on the browser's page area. 
+                        In this document, the content is divided into 3 main areas: header, main and footer. 
+                    </p>
+                    <p>
+                        <code>&lt;header&gt;</code>: 
+                        Typically represent a container for introductory content, such as logos, titles and navigation. 
+                        In this case, this element holds a persistent navigation bar for easy navigation between pages.<br>
+                        <i>Note: Definition is semantic, no real effect on existing styling</i>
+                    </p>
+                    <p>
+                        <code>&lt;nav&gt;</code>: 
+                        Represents a section of the page used for providing navigation controls throughout the website.
+                        In this case, this element serves as a persistent navigation bar, with <code>&lt;a&gt;</code> anchors to provide a method of moving between pages.<br>
+                        <i>Note: This tag is semantic; it provides meaning, not visual style.</i>
+                    </p>
+                    <p>
+                        <code>&lt;main&gt;</code>: 
+                        Represents the dominant content of the page, consisting of content that is either directly related or expands upon the central focus on the page. <br>
+                        <i>Note: This tag is semantic; it provides meaning, not visual style.</i>
+                    </p>
+                    <p>
+                        <code>&lt;div class="banner"&gt;</code>: 
+                        The banner sitting on top of the main content area, only used for My Past, My Future and Comments pages.
+                    </p>
+                    <p>
+                        <code>&lt;div class="page"&gt;</code>: 
+                        The main content area of the page. There exists two different "page" definitions in regards to the webpages:
+                        <ul>
+                            <li>Common for all page elements: vertical padding of 0.5rem, horizontal padding of 1rem.</li>
+                            <li>My Past, My Future and Comments pages: a max width of 768px.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <code>&lt;section&gt;</code>: 
+                        Represents a "section" of a document, mainly as means of separation and organization of contents on the page.<br>
+                        <i>Note: This tag is semantic; it provides meaning, not visual style.</i>
+                    </p>
+                    <p>
+                        <code>&lt;footer&gt;</code>: 
+                        Typically contains the author, copyright information and links to other less important pages for the entire website. 
+                        In this case, this element holds a copyright statement and the assignment for which this website was made as a submission to.<br>
+                        <i>Note: This tag is semantic; it provides meaning, not visual style.</i>
+                    </p>
+                    <p>
+                        The HTML document also makes heavy use of classes (e.g. <code>.columns-2</code> and <code>.gallery</code>) in various <code>&lt;div&gt;</code> elements to apply custom style sets and structure the content as necessary. 
+                        These classes are referenced in the external CSS stylesheet "websystems.css".
+                    </p>
+                    <h2>b. CSS structure</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Selector</th>
+                                <th>Selector type</th>
+                                <th>Description</th>
+                                <th>Scope</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th colspan="4">Global</th></tr>
+                            <tr>
+                                <td><code>:root</code></td>
+                                <td>Pseudo-class</td>
+                                <td>Defines global variables for the site's color palette</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>@font-face</code></td>
+                                <td>At-rule</td>
+                                <td>Imports custom font files into the page</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>@media</code></td>
+                                <td>At-rule</td>
+                                <td>A media query that groups all styles needed for tablet-sized screens</td>
+                                <td>Global</td>
+                            </tr>
+                            </tr><th colspan="4">General</th></tr>
+                            <tr>
+                                <td><code>body</code></td>
+                                <td>Element</td>
+                                <td>Sets the global font, margins and page color</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>.page</code></td>
+                                <td>Class</td>
+                                <td>Applies universal padding to the main content wrapper</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>figcaption</code></td>
+                                <td>Element</td>
+                                <td>Formatting for figure captions</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>footer</code>, <code>footer > p</code></td>
+                                <td>Element / Child combinator</td>
+                                <td>Formatting for the footer and the text within</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>code</code>, <code>code pre</code></td>
+                                <td>Element / Descendant</td>
+                                <td>Formatting for inline and block code snippets</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>a</code>, <code>b</code>, <code>p</code></td>
+                                <td>Element</td>
+                                <td>Sets base color for anchor and bold text and default margins of paragraphs</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>h1</code>, <code>h2</code>, <code>h3</code></td>
+                                <td>Element / Group</td>
+                                <td>Applies consistent font size and top margins for all heading levels</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>table</code>, <code>th</code>, <code>td</code></td>
+                                <td>Element / Group</td>
+                                <td>Sets border style, behaviour and padding for all table elements</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>img</code></td>
+                                <td>Element</td>
+                                <td>Formatting for how images appear on webpages</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr><th colspan="4">Custom elements</th></tr>
+                            <tr>
+                                <td><code>nav</code>, <code>nav a</code>, <code>nav .selected</code></td>
+                                <td>Element / Descendant / Class</td>
+                                <td>Builds the navigation bar, styles links and highlights the selected page</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td><code>.banner</code>, <code>.banner h1</code></td>
+                                <td>Class / Element / Descendant</td>
+                                <td>Base styles for page banners and page title</td>
+                                <td>past.html, future.html, comments.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.past-banner</code>, <code>.future-banner</code>, <code>.comments-banner</code></td>
+                                <td>Class</td>
+                                <td>Applies specific background images to the appropriate banner</td>
+                                <td>past.html, future.html, comments.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.profile</code>, <code>.profile .sidebar</code>, <code>.profile .readme</code></td>
+                                <td>Class / Descendant</td>
+                                <td>GitHub inspired profile layout (sidebar and README)</td>
+                                <td>index.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.gallery .container</code></td>
+                                <td>Class / Descendant</td>
+                                <td>Create a 2-column, dynamic layout for the gallery component container</td>
+                                <td>index.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.gallery .container figure</code></td>
+                                <td>Class / Descendant</td>
+                                <td>Ensure each figure (image / code) displays correctly as a block element</td>
+                                <td>index.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.timeline</code></td>
+                                <td>Class</td>
+                                <td>Component container, acts as an anchor for other elements</td>
+                                <td>past.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.timeline::before</code></td>
+                                <td>Pseudo-element</td>
+                                <td>Draws the line</td>
+                                <td>past.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.timeline .card .heading .trigger</code></td>
+                                <td>Class / Descendant</td>
+                                <td>Styles the circular dot and align it to the line</td>
+                                <td>past.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.columns-2</code>, <code>.columns-3</code></td>
+                                <td>Class</td>
+                                <td>Utility classes for 2-column and 3-column content blocks</td>
+                                <td>future.html, comments.html</td>
+                            </tr>
+                            <tr>
+                                <td><code>.palette</code></td>
+                                <td>Class</td>
+                                <td>Styles the 4-column color palette</td>
+                                <td>comments.html</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h1>&sect;3. Aesthetics</h1>
+                    <h2>a. Layout & Effect</h2>
+                    <p>
+                        This website's layout is designed to be clean, readable and modern, resembling those of Markdown documents like those you have seen in README files.
+                        On the main content pages "My Past", "My Future" and "Comments", the main content area <code>.page</code> is constrained to a <code>max-width</code> of 768px, and centered in relation to the <code>body</code>. 
+                        The result is a page that looks and feels like a document, while preventing lines of text from running too long, potentially straining the viewer's eyes.
+                    </p>
+                    <p>
+                        To achieve such a feat, while also integrating various custom elements the Markdown format doesn't natively support, modern CSS techniques are used for layout:
+                    </p>
+                    <ul>
+                        <li>Flexbox: Used to create dynamically adjustable columns / rows. The <code>nav</code> bar is a great demonstrator of such a capability, dividing each element evenly across the entire width.</li>
+                        <li>CSS Columns: Used to create dynamic, magazine-style layouts.</li>
+                    </ul>
+                    <h2>b. Design</h2>
+                    <p>
+                        The website's design is built on the simple, high-contrast 4 colors palette shown in Figure 2 below. 
+                        This palette is defined in the <code>:root</code> element of the stylesheet for easier usage and formatting across webpages.
+                    </p>
+                    <figure>
+                        <div class="palette">
+                            <div class="primary"><p>#773344<br>Wine</p></div>
+                            <div class="secondary"><p>#E3B5A4<br>Pale Dogwood</p></div>
+                            <div class="background"><p>#F5E9E2<br>Linen</p></div>
+                            <div class="footer"><p>#3A3335<br>Jet</p></div>
+                        </div>
+                        <figcaption>Figure 2. Color palette used by the webpages</figcaption>
+                    </figure>
+                    <p>
+                        Another key design element can be found in the banners at the top of the content pages. 
+                        A semi-transparent dark gradient <code>--darkening</code> (set at 35% transparency) is layered on top of the background image of each banner.
+                        This technique ensures contrast and readability between the white page title and the banner's background image, no matter what image is used.
+                    </p>
+                    <h2>c. Typography</h2>
+                    <p>This website uses 3 fonts for various purposes:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Font name</th>
+                                <th>Font type</th>
+                                <th>Purpose in the design</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="inter">Inter</td>
+                                <td>Sans Serif</td>
+                                <td>General text contents</td>
+                            </tr>
+                            <tr>
+                                <td class="inter-tight">Inter Tight</td>
+                                <td>Sans Serif</td>
+                                <td>UI elements (navigation bar,...)</td>
+                            </tr>
+                            <tr>
+                                <td class="jetbrains-mono">JetBrains Mono</td>
+                                <td>Monospaced</td>
+                                <td>Code snippets</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h1>&sect;4. Addressing Accessibility</h1>
+                    <h2>a. Responsive Design</h2>
+                    <p>
+                        The website is fully responsive and designed to work on all screen sizes. 
+                        This is achieved by including the <code>&lt;meta name="viewport"&gt;</code> tag in the <code>&lt;head&gt;</code> of every page, telling mobile browsers to render at their device's actual width.
+                    </p>
+                    <p>As shown in Figure 3 and 4 below, this approach allows the layout to adapt from a multi-column desktop view (Figure 4) to a clean, single-column mobile view (Figure 3).</p>
+                    <div class="columns-2">
+                        <figure>
+                            <img src="images/comments/layout-mobile.png" alt="A screenshot of the website's homepage, demonstrating the single-column responsive layout for mobile devices.">
+                            <figcaption>Figure 3. Mobile view of the "Home" page</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/comments/layout-desktop.png" alt="A screenshot of the website's homepage, demonstrating the two-column responsive layout for desktop devices.">
+                            <figcaption>Figure 4. Desktop view of the "Home" page</figcaption>
+                        </figure>
                     </div>
-                    <div class="secondary">
-                        <p>#E3B5A4<br>Pale Dogwood</p>
-                    </div>
-                    <div class="background">
-                        <p>#F5E9E2<br>Linen</p>
-                    </div>
-                    <div class="footer">
-                        <p>#3A3335<br>Jet</p>
-                    </div>
-                </div>
-                <figcaption>Figure 2. Color palette used by the webpages</figcaption>
-            </figure>
-            
-            <h2>c. Typography</h2>
-            <p>This website uses a total of 3 fonts for various purposes:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Font name</th>
-                        <th>Font type</th>
-                        <th>Purpose in the design</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="inter">Inter</td>
-                        <td>Sans Serif</td>
-                        <td>General text contents</td>
-                    </tr>
-                    <tr>
-                        <td class="inter-tight">Inter Tight</td>
-                        <td>Sans Serif</td>
-                        <td>UI elements (navigation bar,...)</td>
-                    </tr>
-                    <tr>
-                        <td class="jetbrains-mono">JetBrains Mono</td>
-                        <td>Monospaced</td>
-                        <td>Code snippets</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h1>&sect;4. Addressing Accessibility</h1>
-            <h2>Responsive Design</h2>
-            <h2>The <code>&lt;alt&gt;</code> tag</h2>
-            <h2>Accessibility features</h2>
-            
-            <h1>&sect;5. Rounds of Testing</h1>
-            <h2>Local end-to-end testing</h2>
-            <h2>Validation</h2>
-            <p>HTML / CSS validators</p>
-            <p>Accessibility validators</p>
-            <p>EdSTEM submission checker</p>
-            <h2>Live testing</h2>
-            <p>URL: <a href="https://andrew1013-development.github.io/webpage-assignment/">https://andrew1013-development.github.io/webpage-assignment/</a></p>
-            <p>Repository: <a href="https://github.com/Andrew1013-development/webpage-assignment">https://github.com/Andrew1013-development/webpage-assignment</a></p>
-            
-            <h1>&sect;6. Inspirations and References</h1>
-        </div>
+                    <i>
+                        Note: while another breakpoint exists in the CSS stylesheet (480px), its effect is only seen on one element type in these webpages. 
+                        As such, for the sake of conciseness, we will acknowledge its existence and move on.
+                    </i>
+                    <h2>b. The <code>alt</code> tag</h2>
+                    <p>The <code>alt</code> attribute (alternative text) is a critical accessibility feature used on all <code>&lt;img&gt;</code> tags. Its purpose is to provide a textual description of an image for users who cannot see it, such as those using screen readers. It is also displayed if an image fails to load.</p>
+                    <p>On this website, <code>alt</code> attributes are used to provide specific context for every image, following the principle that alt text should describe the image's purpose.</p>
+                    <ul>
+                        <li>Identity and Context: ???</li>
+                        <li>Representing Concepts: ???</li>
+                        <li>Evidence and Diagrams: ???</li>
+                    </ul>
+                    <h2>c. CSS-Off Accessibility</h2>
+                    <p>A key test for accessibility is to disable CSS. This website is built to remain fully functional and readable without any styles applied.</p>
+                    <p>
+                        As shown in Figure 5 below, when CSS is turned off, this website is still rendered in a logical, top-to-bottom document flow as intended, ensuring usability for text-only browsers or screen readers.
+                        This is achieved with the use of semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, etc.
+                    </p>
+                    <figure>
+                        <img src="images/comments/no-css.png" alt="A screenshot of the comments page with CSS disabled, showing the raw HTML content to demonstrate semantic structure.">
+                        <figcaption>Figure 5. "Comments" page with CSS turned off</figcaption>
+                    </figure>
+                </section>
+                <section>
+                    <h1>&sect;5. Rounds of Testing</h1>
+                    <h2>a. Local end-to-end testing</h2>
+                    <p>
+                        Initial testing was performed locally by opening the index.html file directly in multiple web browsers (Safari, Google Chrome, Mozilla Firefox) across 3 different devices.<br>
+                        This procedure involved:
+                    </p>
+                    <ul>
+                        <li>Ensuring the navigation bar functions properly (i.e. directing to the correct page when clicked on).</li>
+                        <li>Scrolling each page to check for layout errors and content overflows</li>
+                        <li>Resizing the browser windows manually to test responsive breakpoints and ensure all layouts adapted correctly.</li>
+                        <li>Repeat the above 3 steps over a total of 3 devices (phone, tablet, laptop).</li>
+                    </ul>
+                    <h2>b. Validation</h2>
+                    <h3>HTML / CSS validators</h3>
+                    <p>
+                        All HTML files (index.html, past.html, future.html and comments.html) were processed through the W3C Markup Validation Service. 
+                        The CSS stylesheet websystems.css was validated with the help of the W3C CSS Validation Service (Jigsaw).
+                        These validation checks ensure the entire site is built with valid and standards-compliant code, essential for cross-browser compatibility.
+                    </p>
+                    <h3>Accessibility validators</h3>
+                    <p>
+                        The site was evaluated using browser-based accessibility tools (such as the WAVE Web Accessibility Evaluation Tool). 
+                        This helped identify and fix potential issues like missing alt text, insufficient color contrast, or an improper heading hierarchy.
+                    </p>
+                    <h3>EdSTEM submission checker</h3>
+                    <p>As a final validation check, the entire project directory was uploaded to the Website Assignment module, where the submission checker was run to ensure minimal penalties, correct file paths and proper permission settings.</p>
+                    <p>With an estimated space constraint of approximately 8.2MB (checked via running <code>df -h</code> on the terminal session), this check also confirms whether the assignment could fit within the space constraints of the hosting server.</p>
+                    <h2>c. Live testing: using GitHub Pages</h2>
+                    <p>
+                        After local testing and validation, the website was deployed to a live server using GitHub Pages. 
+                        This final step serves as a "live" end-to-end test, confirming that all assets (images, fonts, stylesheets) load correctly over the internet and that the site is accessible to the public.
+                    </p>
+                    <p>URL: <a href="https://andrew1013-development.github.io/webpage-assignment/">https://andrew1013-development.github.io/webpage-assignment/</a></p>
+                    <p>Repository: <a href="https://github.com/Andrew1013-development/webpage-assignment">https://github.com/Andrew1013-development/webpage-assignment</a></p>
+                </section>
+                <section>
+                    <h1>&sect;6. Inspirations and References</h1>
+                </section>
+            </div>
+        </main>
         <footer>
             <p>&copy;2025 Tran Viet Huy</p>
+            <p id="assignment-footer-field">Webpage Assignment - Web Systems (31268)</p>
         </footer>
     </body>
 </html>

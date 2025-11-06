@@ -1,5 +1,4 @@
-images
-
+-- images
 // home
 https://www.facebook.com/photo?fbid=1402570678537001&set=pcb.1402570768536992
 
@@ -15,12 +14,20 @@ https://mohitmishra786.github.io/amILearningEnough/roadmap/os-dev/knowC/
 // comments
 https://pixabay.com/photos/technology-computer-code-javascript-1283624/
 
-inspirations
+-- inspirations
 https://nidnasser.me/
+https://www.notion.com/
 
-tools
+-- tools
 https://emn178.github.io/online-tools/html_encode.html
 
-references
+-- references
+// home
 https://itbible.org/homelabbing-for-beginners-break-things-learn-things-and-have-fun/
 https://cses.fi/problemset/task/1082
+
+// comments
+https://developer.mozilla.org/en-US/docs/Glossary/
+https://fonts.google.com/knowledge/using_variable_fonts_on_the_web
+https://en.wikipedia.org/wiki/Alt_attribute
+https://www.browserstack.com/guide/responsive-design-breakpoints

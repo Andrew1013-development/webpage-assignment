@@ -15,53 +15,57 @@
                 <a href="comments.html">Comments</a>
             </nav>
         </header>
-        <div class="page">
-            <div class="profile">
-                <div class="sidebar">
-                    <img src="images/profile.jpg">
-                    <h2>Tran Viet Huy</h2>
-                    <p>Andrew1013 &middot; he/him</p>
-                    <p><i>"I know all Linux users secretly crave to install Windows 11 but I can't quite prove it" - FaceDev</i></p>
-                </div>
-                <div class="readme">
-                    <p class="filename">Andrew1013 / README.md</p>
-                    <div class="markdown">
-                        <h2>Hi there👋</h2>
-                        <p>
-                            My name is Huy, currently a freshman at HCMUT as part of the TNE program in partnership with UTS.<br>
-                            I'm currently pursuing Information Technology, working on some side projects, learning about some new technologies and participating in the occasional competitions.
-                        </p>
-                        <h3>Hobbies</h3>
-                        <ul>
-                            <li>Competitive Programming</li>
-                            <li>Software Development</li>
-                            <li>Tinkering with electronics</li>
-                            <li>Homelabbing (<a href="https://itbible.org/homelabbing-for-beginners-break-things-learn-things-and-have-fun/" target="_blank">this</a> will be a good read on what "homelabbing" is)</li>
-                            <li>Gaming</li>
-                        </ul>
-                        <p>Visit <a href="#gallery">The Gallery of Hobbies</a> for more details.</p>
-                        <h3>Technical Skills</h3>
-                        <ul>
-                            <li>Programming languages: Python, C/C++, C#, Java, JavaScript</li>
-                            <li>App Development: WinUI 3 (Windows 11), Flutter (cross-platform)</li>
-                            <li>
-                                Web Development
+        <main>
+            <div class="page">
+                <section>
+                    <div class="profile">
+                        <div class="sidebar">
+                            <img src="images/home/profile.jpg" alt="A profile picture of Tran Viet Huy, depicting a humanoid frog holding a gun">
+                            <h2>Tran Viet Huy</h2>
+                            <p>Andrew1013 &middot; he/him</p>
+                            <p><i>"I know all Linux users secretly crave to install Windows 11 but I can't quite prove it" - FaceDev</i></p>
+                        </div>
+                        <div class="readme">
+                            <p class="filename">Andrew1013 / README.md</p>
+                            <div class="markdown">
+                                <h2>Hi there👋</h2>
+                                <p>
+                                    My name is Huy, currently a freshman at HCMUT as part of the TNE program in partnership with UTS.<br>
+                                    I'm currently pursuing Information Technology, working on some side projects, learning about some new technologies and participating in the occasional competitions.
+                                </p>
+                                <h3>Hobbies</h3>
                                 <ul>
-                                    <li>Frontend: Bulma, Tailwind</li>
-                                    <li>Backend: Node.js, Django / Flask (Python)</li>
+                                    <li>Competitive Programming</li>
+                                    <li>Software Development</li>
+                                    <li>Tinkering with electronics</li>
+                                    <li>Homelabbing (<a href="https://itbible.org/homelabbing-for-beginners-break-things-learn-things-and-have-fun/" target="_blank">this</a> will be a good read on what "homelabbing" is)</li>
+                                    <li>Gaming</li>
                                 </ul>
-                            </li>
-                            <li>Microcontrollers: Arduino, ESP32</li>
-                            <li>Server Administration: Landscape (Ubuntu Server), Azure Arc (Windows Server), Portainer (Docker)</li>
-                        </ul>
+                                <p>Visit <a href="#gallery">The Gallery of Hobbies</a> for more details.</p>
+                                <h3>Technical Skills</h3>
+                                <ul>
+                                    <li>Programming languages: Python, C/C++, C#, Java, JavaScript</li>
+                                    <li>App Development: WinUI 3 (Windows 11), Flutter (cross-platform)</li>
+                                    <li>
+                                        Web Development
+                                        <ul>
+                                            <li>Frontend: Bulma, Tailwind</li>
+                                            <li>Backend: Node.js, Django / Flask (Python)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Microcontrollers: Arduino, ESP32</li>
+                                    <li>Server Administration: Landscape (Ubuntu Server), Azure Arc (Windows Server), Portainer (Docker)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="gallery" id="gallery">
-                <h1>The Gallery of Hobbies</h1>
-                <div class="container">
-                    <figure>
-                        <code><pre>
+                </section>
+                <section>
+                    <div class="gallery" id="gallery">
+                        <h1>The Gallery of Hobbies</h1>
+                        <div class="container">
+                            <figure>
+                                <code><pre>
 #include &lt;bits/stdc++.h&gt;
 #define file_io(f_in,f_out) freopen(f_in,&quot;r&quot;,stdin);freopen(f_out,&quot;w&quot;,stdout)
 #define optimize_io() ios_base::sync_with_stdio(false);cin.tie(NULL)
@@ -93,26 +97,36 @@ int main() {
     cout &lt;&lt; res;
     return 0;
 }
-                        </pre></code>
-                        <figcaption>My solution for Sums of Divisors - CSES in C++20</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/home/gaming.jpg">
-                        <figcaption>Ace Combat 7 - Mission 8: Pipeline Destruction</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/home/homelab.png">
-                        <figcaption>My home server's OS (output from neofetch)</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/home/web-dev.png">
-                        <figcaption>
-                            One of my first attempts at web development (displayed on Firefox)<br>
-                            <a href="https://andrew1013-development.github.io/canh-dep-viet-nam/">URL</a> | <a href="https://github.com/Andrew1013-development/canh-dep-viet-nam">GitHub Repository</a>
-                        </figcaption>
-                    </figure>
-                </div>
+                                </pre></code>
+                                <figcaption>My solution for Sums of Divisors - CSES in C++20</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/home/homelab.png" alt="A screenshot of a Linux terminal running neofetch, showing the system details for a home server.">
+                                <figcaption>My home server's OS (output from neofetch, displayed on Windows Terminal)</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/home/project-wingman.jpg" alt="A gameplay screenshot from the game Project Wingman, showing a jet fighter in a foggy, nighttime mission.">
+                                <figcaption>Project Wingman Frontline-59 - Mission 2: Home Invasion</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/home/ace-combat.jpg" alt="A gameplay screenshot from the game Ace Combat 7, showing a jet fighter destroying a target ship.">
+                                <figcaption>Ace Combat 7 - Mission 8: Pipeline Destruction</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/home/web-dev.png" alt="A screenshot of a previous web development project, a tourism website for Phố cổ Hội An.">
+                                <figcaption>
+                                    One of my first attempts at web development (displayed on Firefox)<br>
+                                    <a href="https://andrew1013-development.github.io/canh-dep-viet-nam/">URL</a> | <a href="https://github.com/Andrew1013-development/canh-dep-viet-nam">GitHub Repository</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </div>
+        </main>
+        <footer>
+            <p>&copy;2025 Tran Viet Huy</p>
+            <p id="assignment-footer-field">Webpage Assignment - Web Systems (31268)</p>
+        </footer>
     </body>
 </html>
