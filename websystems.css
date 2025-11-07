@@ -280,10 +280,6 @@ nav .selected { background-color: var(--secondary-color); }
 /* ===== RESPONSIVE DESIGN ===== */
 /* mobile */
 @media screen and (max-width: 480px) {
-    .columns-3 { columns: 1; }
-}
-/* tablet */
-@media screen and (min-width: 480px) and (max-width: 768px) {
     .profile {
         flex-direction: column;
         align-items: stretch;
@@ -294,13 +290,17 @@ nav .selected { background-color: var(--secondary-color); }
         box-sizing: border-box;
     }
     .profile .sidebar img {
-        width: 33%;
-        max-width: 192px; /* 25% of the maximum width */
+        width: 50%;
+        max-width: 160px; /* 33% of the maximum width */
         display: block;
         margin: 0 auto;
     }
     .columns-2 { columns: 1; }
-    .columns-3 { columns: 2; }
+    .columns-3 { columns: 1; }
     .gallery .container { columns: 1; }
     #assignment-footer-field { display: none; }
+}
+/* tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .columns-3 { columns: 2; }
 }
