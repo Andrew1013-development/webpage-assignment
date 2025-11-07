@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
         </header>
         <main>
             <div class="banner comments-banner">
-                <h1>Comments</h1>
+                <p>Comments</p>
             </div>
             <div class="page" id="comments">
                 <section>
@@ -112,11 +112,11 @@
                     <p>
                         <code>&lt;div class="page"&gt;</code>: 
                         The main content area of the page. There exists two different "page" definitions in regards to the webpages:
-                        <ul>
-                            <li>Common for all page elements: vertical padding of 0.5rem, horizontal padding of 1rem.</li>
-                            <li>My Past, My Future and Comments pages: a max width of 768px.</li>
-                        </ul>
                     </p>
+                    <ul>
+                        <li>Common for all page elements: vertical padding of 0.5rem, horizontal padding of 1rem.</li>
+                        <li>My Past, My Future and Comments pages: a max width of 768px.</li>
+                    </ul>
                     <p>
                         <code>&lt;section&gt;</code>: 
                         Represents a "section" of a document, mainly as means of separation and organization of contents on the page.<br>
@@ -143,7 +143,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><th colspan="4">Global</th></tr>
+                            <tr><th colspan="4" class="group-row">Global</th></tr>
                             <tr>
                                 <td><code>:root</code></td>
                                 <td>Pseudo-class</td>
@@ -162,7 +162,7 @@
                                 <td>A media query that groups all styles needed for tablet-sized screens</td>
                                 <td>Global</td>
                             </tr>
-                            </tr><th colspan="4">General</th></tr>
+                            <tr><th colspan="4" class="group-row">General</th></tr>
                             <tr>
                                 <td><code>body</code></td>
                                 <td>Element</td>
@@ -188,15 +188,15 @@
                                 <td>Global</td>
                             </tr>
                             <tr>
-                                <td><code>code</code>, <code>code pre</code></td>
+                                <td><code>code</code>, <code>pre</code></td>
                                 <td>Element / Descendant</td>
                                 <td>Formatting for inline and block code snippets</td>
                                 <td>Global</td>
                             </tr>
                             <tr>
-                                <td><code>a</code>, <code>b</code>, <code>p</code></td>
+                                <td><code>a</code>, <code>b</code>, <code>p</code>, <code>q</code></td>
                                 <td>Element</td>
-                                <td>Sets base color for anchor and bold text and default margins of paragraphs</td>
+                                <td>Sets base color for anchor and bold text, default margins of paragraphs and formatting for quotations</td>
                                 <td>Global</td>
                             </tr>
                             <tr>
@@ -217,7 +217,7 @@
                                 <td>Formatting for how images appear on webpages</td>
                                 <td>Global</td>
                             </tr>
-                            <tr><th colspan="4">Custom elements</th></tr>
+                            <tr><th colspan="4" class="group-row">Custom elements</th></tr>
                             <tr>
                                 <td><code>nav</code>, <code>nav a</code>, <code>nav .selected</code></td>
                                 <td>Element / Descendant / Class</td>
@@ -318,7 +318,7 @@
                     </figure>
                     <p>
                         Another key design element can be found in the banners at the top of the content pages. 
-                        A semi-transparent dark gradient <code>--darkening</code> (set at 35% transparency) is layered on top of the background image of each banner.
+                        A semi-transparent dark gradient set at 35% transparency is layered on top of the background image of each banner.
                         This technique ensures contrast and readability between the white page title and the banner's background image, no matter what image is used.
                     </p>
                     <h2>c. Typography</h2>
@@ -377,20 +377,23 @@
                     <p>On this website, <code>alt</code> attributes are used to provide specific context for every image, following the principle that alt text should describe the image's purpose.</p>
                     <ul>
                         <li>
-                            Identity and Context: On the "Home" page, the profile image's alt text is <code>"A profile picture of Tran Viet Huy..."</code> [cite: index.html]. On the "My Past" page, images in the timeline are described in context, such as <code>"A graduation photo of the Tran Khai Nguyen High School class..."</code><br>
+                            Identity and Context: 
+                            On the "Home" page, the profile image's alt text is <q cite="index.html">A profile picture of Tran Viet Huy...</q>. On the "My Past" page, images in the timeline are described in context, such as <q cite="past.html">A graduation photo of the Tran Khai Nguyen High School class...</q><br>
                         </li>
                         <li>
-                            Representing Concepts: Representing Concepts:</b> On the "My Future" page, images for each aspiration are described, such as <code>"The logo for the ICPC Foundation..."</code> [cite: future.html] or <code>"A flowchart diagram illustrating a roadmap for learning operating system development..."</code><br>
+                            Representing Concepts: 
+                            On the "My Future" page, images for each aspiration are described, such as <q cite="future.html">The logo for the ICPC Foundation...</q> or <q cite="future.html">A flowchart diagram illustrating a roadmap for learning operating system development...</q><br>
                         </li>
                         <li>
-                            Evidence and Diagrams: On this "Comments" page, all figures have descriptive alt text to explain what they demonstrate, such as <code>"A screenshot of the website's homepage, demonstrating the single-column responsive layout for mobile devices"</code>
+                            Evidence and Diagrams: 
+                            On this "Comments" page, all figures have descriptive alt text to explain what they demonstrate, such as <q cite="comments.html">A screenshot of the website's homepage, demonstrating the single-column responsive layout for mobile devices.</q>
                         </li>
                     </ul>
                     <h2>c. CSS-Off Accessibility</h2>
-                    <p>A key test for accessibility is to disable CSS. This website is built to remain fully functional and readable without any styles applied.</p>
+                    <p>A key test for accessibility is to disable CSS. This website is built to remain fully functional and readable without any CSS styles applied.</p>
                     <p>
                         As shown in Figure 5 below, when CSS is turned off, this website is still rendered in a logical, top-to-bottom document flow as intended, ensuring usability for text-only browsers or screen readers.
-                        This is achieved with the use of semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, etc.
+                        This is achieved with the use of semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> and <code>&lt;footer&gt;</code>.
                     </p>
                     <figure>
                         <img src="images/comments/no-css.png" alt="A screenshot of the comments page with CSS disabled, showing the raw HTML content to demonstrate semantic structure.">
@@ -424,23 +427,83 @@
                     </p>
                     <h3>EdSTEM submission checker</h3>
                     <p>As a final validation check, the entire project directory was uploaded to the Website Assignment module, where the submission checker was run to ensure minimal penalties, correct file paths and proper permission settings.</p>
-                    <p>With an estimated space constraint of approximately 8.2MB (checked via running <code>df -h</code> on the terminal session), this check also confirms whether the assignment could fit within the space constraints of the hosting server.</p>
+                    <p>With an estimated space constraint of approximately 19MB (checked via running <code>df -h</code> on the terminal session), this check also confirms whether the assignment could fit within the space constraints of the hosting server.</p>
                     <h2>c. Live testing: using GitHub Pages</h2>
                     <p>
                         After local testing and validation, the website was deployed to a live server using GitHub Pages. 
                         This final step serves as a "live" end-to-end test, confirming that all assets (images, fonts, stylesheets) load correctly over the internet and that the site is accessible to the public.
                     </p>
-                    <p>URL: <a href="https://andrew1013-development.github.io/webpage-assignment/">https://andrew1013-development.github.io/webpage-assignment/</a></p>
-                    <p>Repository: <a href="https://github.com/Andrew1013-development/webpage-assignment">https://github.com/Andrew1013-development/webpage-assignment</a></p>
+                    <p>URL: <a href="https://andrew1013-development.github.io/webpage-assignment/" target="_blank">https://andrew1013-development.github.io/webpage-assignment/</a></p>
+                    <p>Repository: <a href="https://github.com/Andrew1013-development/webpage-assignment" target="_blank">https://github.com/Andrew1013-development/webpage-assignment</a></p>
                     <h2>d. What I missed</h2>
-                    <p>Even with all that testing and validation, there are some minor issues I still can't fix in time for submission due to time constraints...</p>
+                    <p>Even with all the testing and validation, there are some minor issues I still can't fix in time for submission due to time constraints...</p>
                     <ul>
-                        <li>Tables on the "Comments" page don't fit well on screen widths of 480px and below</li>
-                        <li>Font size doesn't dynamically adjust to fit properly within the screen widths</li>
+                        <li>
+                            The CSS Selectors table on the "Comments" page don't fit well on screen widths of 480px and below, requiring the user to scroll horizontally to read the leftmost column.<br>
+                            The minimum width such that the text can fit in my testing is 525px.
+                        </li>
+                        <li>Font size doesn't dynamically adjust to fit properly within the screen widths.</li>
+                        <li>No performance optimization strategy (e.g. lazy loading of images) is used to minimize page loading times and enhance the user experience.</li>
                     </ul>
                 </section>
                 <section>
-                    <h1>&sect;6. Inspirations and References</h1>
+                    <h1>&sect;6. Inspirations, References and Citations</h1>
+                    <h2>Inspirations</h2>
+                    <ul>
+                        <li>Abdelmajid Nidnasser's Personal Portfolio: <a href="https://nidnasser.me/" target="_blank">https://nidnasser.me/</a></li>
+                        <li>Notion (Markdown formatting): <a href="https://www.notion.com/" target="_blank">https://www.notion.com/</a></li>
+                        <li>GitHub (README formatting): <a href="https://github.com/Andrew1013-development" target="_blank">https://github.com/Andrew1013-development</a></li>
+
+                    </ul>
+                    <h2>Tools and technical references</h2>
+                    <ul>
+                        <li>
+                            emn178's HTML Encoder / Decoder (used for formatting C++ code in HTML)<br>
+                            <a href="https://emn178.github.io/online-tools/html_encode.html" target="_blank">https://emn178.github.io/online-tools/html_encode.html</a>
+                        </li>
+                        <li>
+                            MDN Web Docs<br>
+                            <a href="https://developer.mozilla.org/en-US/docs/" target="_blank">https://developer.mozilla.org/en-US/docs/</a>
+                        </li>
+                        <li>
+                            Google Fonts - Using variable fonts on the web<br>
+                            <a href="https://fonts.google.com/knowledge/using_variable_fonts_on_the_web" target="_blank">https://fonts.google.com/knowledge/using_variable_fonts_on_the_web</a>
+                        </li>
+                        <li>
+                            Wikipedia - Alt attribute<br>
+                            <a href="https://en.wikipedia.org/wiki/Alt_attribute" target="_blank">https://en.wikipedia.org/wiki/Alt_attribute</a></li>
+                        <li>
+                            BrowserStack - Breakpoints for Responsive Web Design in 2025<br>
+                            <a href="https://www.browserstack.com/guide/responsive-design-breakpoints" target="_blank">https://www.browserstack.com/guide/responsive-design-breakpoints</a>
+                        </li>
+                    </ul>
+                    <h2>External images</h2>
+                    <ul>
+                        <li>
+                            Ho Chi Minh University of Technology - Transparent logo<br>
+                            <a href="https://hcmut.edu.vn/gioi-thieu/nhan-dien-thuong-hieu">https://hcmut.edu.vn/gioi-thieu/nhan-dien-thuong-hieu</a>
+                        </li>
+                        <li>
+                            Wikipedia - Glen Beck and Betty Snyder program the ENIAC in building 328 at the Ballistic Research Laboratory.jpg<br>
+                            <a href="https://en.wikipedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg" target="_blank">https://en.wikipedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg</a>
+                        </li>
+                        <li>
+                            Freepik - Digital technology wave from connecting dot design, dynamic flowing colorful light<br>
+                            <a href="https://www.freepik.com/free-vector/digital-technology-wave-from-connecting-dot-design-dynamic-flowing-colorful-light_19480803.htm" target="_blank">https://www.freepik.com/free-vector/digital-technology-wave-from-connecting-dot-design-dynamic-flowing-colorful-light_19480803.htm</a>
+                        </li>
+                        <li>
+                            ICPC Global<br>
+                            <a href="https://icpc.global/login" target="_blank">https://icpc.global/login</a>
+                        </li>
+                        <li>
+                            Am I Learning Enough - Advanced Operating System Development Roadmap<br>
+                            <a href="https://mohitmishra786.github.io/amILearningEnough/roadmap/os-dev/knowC/" target="_blank">https://mohitmishra786.github.io/amILearningEnough/roadmap/os-dev/knowC/</a>
+                        </li>
+                        <li>
+                            Pixabay - Technology, Computer, Code image<br>
+                            <a href="https://pixabay.com/photos/technology-computer-code-javascript-1283624/" target="_blank">https://pixabay.com/photos/technology-computer-code-javascript-1283624/</a>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </main>
