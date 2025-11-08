@@ -260,7 +260,7 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
     transition: box-shadow 0.1s ease-out, background-color 0.1s ease-out, padding 0.1s ease-out;
 }
 .table-of-contents a:hover {  
-    box-shadow: 0 0 3.5rem rgb(0,0,0,0.35); 
+    box-shadow: 0 0 3rem rgb(0,0,0,0.2); 
     background-color: #E3B5A459;
     padding: 0.25rem 0.75rem;
 }
