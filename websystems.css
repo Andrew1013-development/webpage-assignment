@@ -247,21 +247,22 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
 .timeline .card .details { font-weight: 200; }
 
 /* columns group */
-.columns-2 { columns: 2; }
+/* 
+    since the algorithm for balancing columns between Firefox and Chrome is different, 
+    leading to different layouts entirely, we will be using Flexbox instead of CSS 
+    Columns for this.
+    The old implementation using CSS Columns is still available as commented code.
+*/
+.columns-2, .columns-3 { 
+    display: flex;
+    gap: 1rem;
+}
 .columns-2 figure {
+    flex: 1;
     margin: 0;
-    display: inline-block;
 }
 .columns-2 figure img { border: 1px solid black; }
 
-/*
-.columns-3 { columns: 3; }
-.columns-3 .element  { display: inline-block; }
-*/
-.columns-3 { 
-    display: flex; 
-    gap: 1rem;
-}
 .columns-3 .element { 
     flex: 1; 
     display: flex;
@@ -270,6 +271,12 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
 .columns-3 figure { margin: 0; }
 .columns-3 figure img { width: 100%; }
 .columns-3 figure figcaption { padding-bottom: 0.5rem; }
+
+/*
+.columns-2 { columns: 2; }
+.columns-3 { columns: 3; }
+.columns-3 .element  { display: inline-block; }
+*/
 
 /* palette */
 .palette { 
@@ -323,9 +330,8 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
         display: block;
         margin: 0 auto;
     }
-    .columns-2 { columns: 1; }
     /*.columns-3 { columns: 1; }*/
-    .columns-3 { flex-direction: column; }
+    .columns-2, .columns-3 { flex-direction: column; }
     .gallery .container { columns: 1; }
     #assignment-footer-field { display: none; }
 }

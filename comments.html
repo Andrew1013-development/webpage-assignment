@@ -300,7 +300,13 @@
                     </p>
                     <ul>
                         <li><b>Flexbox:</b> Used to create dynamically adjustable columns / rows. The <code>nav</code> bar is a great demonstrator for such a capability, dividing each element evenly across the entire width.</li>
-                        <li><b>CSS Columns:</b> Used to create dynamic, magazine-style layouts. The utlity class <code>.columns-2</code> is a great demonstrator of this technique.</li>
+                        <li>
+                            <b>CSS Columns:</b> Used to create dynamic, magazine-style layouts.<br>
+                            While earlier implementations of utility classes <code>columns-2</code> and <code>columns-3</code> is based on CSS Columns.
+                            However, due to rendering algorithms differing between Chrome and Firefox, the same layout on Firefox can't be guaranteed to appear the same way in Chrome.
+                            Therefore, <code>columns-2</code> and <code>columns-3</code> are reimplemented using CSS Flexboxes to maintain uniformity.<br><br>
+                            This is a good read on the matter: <a href="https://medium.com/@case_lab/browser-compatibility-testing-key-differences-in-firefox-safari-and-chrome-18b133ec9507">Browser Compatibility Testing: Key Differences in Firefox, Safari, and Chrome - TestCaseLab (Medium)</a>
+                        </li>
                     </ul>
                     <h2>b. Design</h2>
                     <p>
