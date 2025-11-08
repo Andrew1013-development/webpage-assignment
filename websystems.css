@@ -262,6 +262,12 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
     margin: 0;
 }
 .columns-2 figure img { border: 1px solid black; }
+/* 
+    hardcode ratio of width of desktop (1920px) to mobile (882px) to scale uniformly
+    1920 / 882 = 320 / 147 ~ 2.1768707482993
+*/
+.columns-2 figure#mobile { flex: 147; }
+.columns-2 figure#desktop { flex: 320; } 
 
 .columns-3 .element { 
     flex: 1; 
