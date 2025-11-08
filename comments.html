@@ -20,7 +20,35 @@
                 <p>Comments</p>
             </div>
             <div class="page" id="comments">
-                <section>
+                <section id="section-0">
+                    <h1>Table of Contents</h1>
+                    <div class="table-of-contents">
+                        <a href="#section-1" class="level-1">&sect;1. Architecting the Website</a>
+                        
+                        <a href="#section-2" class="level-1">&sect;2. Structuring the Webpages</a>
+                        <a href="#section-2a" class="level-2">&Tab;a. HTML Structure</a>
+                        <a href="#section-2b" class="level-2">&Tab;b. CSS Structure</a>
+                        
+                        <a href="#section-3" class="level-1">&sect;3. Aesthetics</a>
+                        <a href="#section-3a" class="level-2">a. Layout & Effect</a>
+                        <a href="#section-3b" class="level-2">b. Design</a>
+                        <a href="#section-3c" class="level-2">c. Typography</a>
+                        
+                        <a href="#section-4" class="level-1">&sect;4. Addressing Accessibility</a>
+                        <a href="#section-4a" class="level-2">a. Responsive Design</a>
+                        <a href="#section-4b" class="level-2">b. The alt tag</a>
+                        <a href="#section-4c" class="level-2">c. CSS-Off Accessibility</a>
+                        
+                        <a href="#section-5" class="level-1">&sect;5. Rounds of Testing</a>
+                        <a href="#section-5a" class="level-2">a. Local end-to-end testing</a>
+                        <a href="#section-5b" class="level-2">b. Validation</a>
+                        <a href="#section-5c" class="level-2">c. Live testing: using GitHub Pages</a>
+                        <a href="#section-5d" class="level-2">d. What I missed</a>
+                        
+                        <a href="#section-6" class="level-1">&sect;6. Inspirations, References and Citations</a>
+                    </div>
+                </section>
+                <section id="section-1">
                     <h1>&sect;1. Architecting the Website</h1>
                     <p>In accordance with the UTS's Webpage Assignment's specifications, my website has 4 webpages and 1 CSS stylesheet, laid out as follows:</p>
                     <table>
@@ -66,13 +94,13 @@
                         </tbody>
                     </table>
                 </section>
-                <section>
+                <section id="section-2">
                     <h1>&sect;2. Structuring the Webpages</h1>
                     <figure>
                         <img src="images/comments/page-structure.png" alt="Diagram of the website's general page structure, showing the header, banner, main content area, and footer.">
                         <figcaption>Figure 1. General page structure (shown on "My Future" page)</figcaption>
                     </figure>
-                    <h2>a. HTML structure</h2>
+                    <h2 id="section-2a">a. HTML Structure</h2>
                     <p><code>&lt;!DOCTYPE html&gt;</code>: Defines the document type (HTML5 Document), ensuring compliance with the HTML specification when rendering on a browser.</p>
                     <p>
                         <code>&lt;html&gt;</code>: 
@@ -130,9 +158,9 @@
                     </p>
                     <p>
                         The HTML document also makes heavy use of classes (e.g. <code>.columns-2</code> and <code>.gallery</code>) in various <code>&lt;div&gt;</code> elements to apply custom style sets and structure the content as necessary. 
-                        These classes are referenced in the external CSS stylesheet "websystems.css".
+                        These classes are referenced in the external CSS stylesheet <code>websystems.css</code>.
                     </p>
-                    <h2>b. CSS structure</h2>
+                    <h2 id="section-2b">b. CSS Structure</h2>
                     <table>
                         <thead>
                             <tr>
@@ -273,6 +301,12 @@
                                 <td>past.html</td>
                             </tr>
                             <tr>
+                                <td><code>.table-of-contents</code></td>
+                                <td>Class</td>
+                                <td>Table of contents</td>
+                                <td>comments.html</td>
+                            </tr>
+                            <tr>
                                 <td><code>.columns-2</code>, <code>.columns-3</code></td>
                                 <td>Class</td>
                                 <td>Utility classes for 2-column and 3-column content blocks</td>
@@ -281,15 +315,15 @@
                             <tr>
                                 <td><code>.palette</code></td>
                                 <td>Class</td>
-                                <td>Styles the 4-column color palette</td>
+                                <td>4-column color palette</td>
                                 <td>comments.html</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
-                <section>
+                <section id="section-3">
                     <h1>&sect;3. Aesthetics</h1>
-                    <h2>a. Layout & Effect</h2>
+                    <h2 id="section-3a">a. Layout & Effect</h2>
                     <p>
                         This website's layout is designed to be clean, readable and modern, resembling those of Markdown documents like those you have seen in README files.
                         On the main content pages "My Past", "My Future" and "Comments", the main content area <code>.page</code> is constrained to a <code>max-width</code> of 768px, and centered in relation to the <code>body</code>. 
@@ -308,7 +342,7 @@
                             This is a good read on the matter: <a href="https://medium.com/@case_lab/browser-compatibility-testing-key-differences-in-firefox-safari-and-chrome-18b133ec9507">Browser Compatibility Testing: Key Differences in Firefox, Safari, and Chrome - TestCaseLab (Medium)</a>
                         </li>
                     </ul>
-                    <h2>b. Design</h2>
+                    <h2 id="section-3b">b. Design</h2>
                     <p>
                         The website's design is built on the simple, high-contrast 4 colors palette shown in Figure 2 below. 
                         This palette is defined in the <code>:root</code> element of the stylesheet for easier usage and formatting across webpages.
@@ -327,7 +361,7 @@
                         A semi-transparent dark gradient set at 35% transparency is layered on top of the background image of each banner.
                         This technique increases contrast and readability between the white page title and the banner's background image, no matter what image is used.
                     </p>
-                    <h2>c. Typography</h2>
+                    <h2 id="section-3c">c. Typography</h2>
                     <p>This website uses 3 fonts for various purposes:</p>
                     <table>
                         <thead>
@@ -350,15 +384,15 @@
                             </tr>
                             <tr>
                                 <td class="jetbrains-mono">JetBrains Mono</td>
-                                <td>Monospaced</td>
+                                <td>Monospace</td>
                                 <td>Code snippets</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
-                <section>
+                <section id="section-4">
                     <h1>&sect;4. Addressing Accessibility</h1>
-                    <h2>a. Responsive Design</h2>
+                    <h2 id="section-4a">a. Responsive Design</h2>
                     <p>
                         The website is fully responsive and designed to work on all screen sizes. 
                         This is achieved by including the <code>&lt;meta name="viewport"&gt;</code> tag in the <code>&lt;head&gt;</code> of every page, telling mobile browsers to render at their device's actual width.
@@ -378,13 +412,14 @@
                         Note: while another breakpoint exists in the CSS stylesheet (480px), its effect is only seen on one element type in these webpages. 
                         As such, for the sake of conciseness, we will acknowledge its existence and move on.
                     </i>
-                    <h2>b. The <code>alt</code> tag</h2>
+                    <h2 id="section-4b">b. The <code>alt</code> tag</h2>
                     <p>The <code>alt</code> attribute (alternative text) is a critical accessibility feature used on all <code>&lt;img&gt;</code> tags. Its purpose is to provide a textual description of an image for users who cannot see it, such as those using screen readers. It is also displayed if an image fails to load.</p>
                     <p>On this website, <code>alt</code> attributes are used to provide specific context for every image, following the principle that alt text should describe the image's purpose.</p>
                     <ul>
                         <li>
                             <b>Identity and Context:</b> 
-                            On the "Home" page, the profile image's alt text is <q cite="index.html">A profile picture of Tran Viet Huy...</q>. On the "My Past" page, images in the timeline are described in context, such as <q cite="past.html">A graduation photo of the Tran Khai Nguyen High School class...</q><br>
+                            On the "Home" page, the profile image's alt text is <q cite="index.html">A profile picture of Tran Viet Huy...</q>. 
+                            On the "My Past" page, images in the timeline are described in context, such as <q cite="past.html">A graduation photo of the Tran Khai Nguyen High School class...</q><br>
                         </li>
                         <li>
                             <b>Representing Concepts:</b> 
@@ -395,10 +430,14 @@
                             On this "Comments" page, all figures have descriptive alt text to explain what they demonstrate, such as <q cite="comments.html">A screenshot of the website's homepage, demonstrating the single-column responsive layout for mobile devices.</q>
                         </li>
                     </ul>
-                    <h2>c. CSS-Off Accessibility</h2>
-                    <p>A key test for accessibility is to disable CSS. This website is built to remain fully functional and readable without any CSS styles applied.</p>
+                    <h2 id="section-4c">c. CSS-Off Accessibility</h2>
                     <p>
-                        As shown in Figure 5 below, when CSS is turned off, this website is still rendered in a logical, top-to-bottom document flow as intended, ensuring usability for text-only browsers or screen readers.
+                        A key test for accessibility is to disable CSS to ensure logical reading order for assistive screen readers and text-only browsers.
+                        While you're not required to explicitly make your site readable without CSS in this day and age (<a href="https://stackoverflow.com/questions/47809620/is-it-recommended-to-disable-css-to-check-a-website-for-accessibility">this discussion thread on StackOverflow</a> is a great read on the matter), it's still a useful measure to increase accessibility to a wider range of users.
+                    </p>
+                    <p>This website is built with such testing in mind to remain fully functional and readable without any CSS styling applied.</p>
+                    <p>    
+                        As shown in Figure 5 below, when CSS is turned off, this website is still rendered in a logical, top-to-bottom document flow as intended, ensuring usability for text-only browsers and screen readers.
                         This is achieved with the use of semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> and <code>&lt;footer&gt;</code>.
                     </p>
                     <figure>
@@ -406,24 +445,22 @@
                         <figcaption>Figure 5. "Comments" page with CSS turned off</figcaption>
                     </figure>
                 </section>
-                <section>
+                <section id="section-5">
                     <h1>&sect;5. Rounds of Testing</h1>
-                    <h2>a. Local end-to-end testing</h2>
-                    <p>
-                        Initial testing was performed locally by opening the <code>index.html</code> file directly in multiple web browsers (Safari, Google Chrome, Mozilla Firefox) across 3 different devices.<br>
-                        This procedure involved:
-                    </p>
+                    <h2 id="section-5a">a. Local end-to-end testing</h2>
+                    <p>Initial testing was performed locally by opening the <code>index.html</code> file directly in multiple web browsers (Safari, Google Chrome, Mozilla Firefox) across 3 different devices.</p>
+                    <p>This procedure involved:</p>
                     <ul>
                         <li>Ensuring the navigation bar functions properly (i.e. directing to the correct page when clicked on).</li>
                         <li>Scrolling each page to check for layout errors and content overflows</li>
                         <li>Resizing the browser windows manually to test responsive breakpoints and ensure all layouts adapted correctly.</li>
                         <li>Repeat the above 3 steps over a total of 3 devices (phone, tablet, laptop).</li>
                     </ul>
-                    <h2>b. Validation</h2>
+                    <h2 id="section-5b">b. Validation</h2>
                     <h3>HTML / CSS validators</h3>
                     <p>
                         All HTML files (<code>index.html</code>, <code>past.html</code>, <code>future.html</code> and <code>comments.html</code>) were processed through the <a href="https://validator.w3.org/">W3C Markup Validation Service</a>. 
-                        The CSS stylesheet websystems.css was validated with the help of the <a href="https://jigsaw.w3.org/css-validator">W3C CSS Validation Service (Jigsaw)</a>.
+                        The CSS stylesheet <code>websystems.css</code> was validated with the help of the <a href="https://jigsaw.w3.org/css-validator">W3C CSS Validation Service (Jigsaw)</a>.
                         These validation checks verify that the entire site is built with valid and standards-compliant code, essential for cross-browser compatibility.
                     </p>
                     <h3>Accessibility validators</h3>
@@ -434,14 +471,14 @@
                     <h3>EdSTEM submission checker</h3>
                     <p>As a final validation check, the entire project directory was uploaded to the Website Assignment module, where the submission checker was run to minimize penalties and check for correct file paths and proper permission settings.</p>
                     <p>With an estimated space constraint of approximately 19MB (checked via running <code>df -h</code> on the terminal session) and a hard size limit of 1MB on images, this check also confirms whether the assignment could fit within the space constraints of the hosting server.</p>
-                    <h2>c. Live testing: using GitHub Pages</h2>
+                    <h2 id="section-5c">c. Live testing: using GitHub Pages</h2>
                     <p>
                         After local testing and validation, the website was deployed to a live server using GitHub Pages. 
                         This final step serves as a "live" end-to-end test, confirming that all assets (images, fonts, stylesheets) load correctly over the internet and that the site is accessible to the public.
                     </p>
                     <p>URL: <a href="https://andrew1013-development.github.io/webpage-assignment/" target="_blank">https://andrew1013-development.github.io/webpage-assignment/</a></p>
                     <p>Repository: <a href="https://github.com/Andrew1013-development/webpage-assignment" target="_blank">https://github.com/Andrew1013-development/webpage-assignment</a></p>
-                    <h2>d. What I missed</h2>
+                    <h2 id="section-5d">d. What I missed</h2>
                     <p>Even with all the testing and validation, there are some minor issues I still can't fix in time for submission due to time constraints...</p>
                     <ul>
                         <li>
@@ -452,7 +489,7 @@
                         <li>No performance optimization strategy (e.g. lazy loading of images) is used to minimize page loading times and enhance the user experience.</li>
                     </ul>
                 </section>
-                <section>
+                <section id="section-6">
                     <h1>&sect;6. Inspirations, References and Citations</h1>
                     <h2>Inspirations</h2>
                     <ul>
@@ -465,7 +502,11 @@
                     <ul>
                         <li>emn178 -  <a href="https://emn178.github.io/online-tools/html_encode.html" target="_blank">HTML Encoder / Decoder</a> (used for formatting C++ code in HTML)<br></li>
                         <li>GitHub - <a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li>
-                        <li>MDN Web Docs - <a href="https://developer.mozilla.org/en-US/docs/Web#documentation_for_web_developers" target="_blank">Documentation for Web developers</a></li>
+                        <li>
+                            MDN Web Docs - 
+                            <a href="https://developer.mozilla.org/en-US/docs/Web#documentation_for_web_developers" target="_blank">Documentation for Web developers</a> | 
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML#html_and_accessibility" target="_blank">HTML and accessibility</a>
+                        </li>
                         <li>Google Fonts - <a href="https://fonts.google.com/knowledge/using_variable_fonts_on_the_web" target="_blank">Using variable fonts on the web</a></li>
                         <li>Wikipedia - <a href="https://en.wikipedia.org/wiki/Alt_attribute" target="_blank">Alt attribute</a></li>
                         <li>BrowserStack - <a href="https://www.browserstack.com/guide/responsive-design-breakpoints" target="_blank">Breakpoints for Responsive Web Design in 2025</a></li>
@@ -475,7 +516,7 @@
                         <li>Ho Chi Minh University of Technology - <a href="https://hcmut.edu.vn/gioi-thieu/nhan-dien-thuong-hieu">Brand identity (transparent logo)</a></li>
                         <li>Wikipedia - <a href="https://en.wikipedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg" target="_blank">Glen Beck and Betty Snyder program the ENIAC in building 328 at the Ballistic Research Laboratory.jpg</a></li>
                         <li>Freepik - <a href="https://www.freepik.com/free-vector/digital-technology-wave-from-connecting-dot-design-dynamic-flowing-colorful-light_19480803.htm" target="_blank">Digital technology wave from connecting dot design, dynamic flowing colorful light</a></li>
-                        <li><a href="https://icpc.global/login" target="_blank">ICPC Global</a></li>
+                        <li>ICPC Foundation - <a href="https://icpc.global/" target="_blank">ICPC Global</a></li>
                         <li>Am I Learning Enough - <a href="https://mohitmishra786.github.io/amILearningEnough/roadmap/os-dev/knowC/" target="_blank">Advanced Operating System Development Roadmap</a></li>
                         <li>Pixabay - <a href="https://pixabay.com/photos/technology-computer-code-javascript-1283624/" target="_blank">Technology, Computer, Code image</a></li>
                     </ul>
@@ -486,6 +527,7 @@
         <footer>
             <p>&copy;2025 Tran Viet Huy</p>
             <p id="assignment-footer-field">Webpage Assignment - Web Systems (31268)</p>
+            <p id="date-footer-field">Last modified: October 8<sup>th</sup> 2025 @ 5:42PM</p>
         </footer>
     </body>
 </html>

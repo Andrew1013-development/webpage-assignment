@@ -66,7 +66,7 @@ footer {
     align-items: center;
     justify-content: center;
 }
-footer > p { 
+footer p { 
     margin: 0 1rem;
     color: white; 
     font-family: "Inter Tight";
@@ -190,7 +190,7 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
     max-height: 96px;
 }
 .profile .readme {
-    border: 1px solid black;
+    border: 1px solid grey;
     border-radius: 0.5rem;
     padding: 1rem;
     width: 70%;
@@ -246,6 +246,27 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
 }
 .timeline .card .details { font-weight: 200; }
 
+/* table of contents */
+.table-of-contents {
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.table-of-contents a { 
+    display: block; 
+    margin: 0.25rem 0;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.1s ease-out, background-color 0.1s ease-out, padding 0.1s ease-out;
+}
+.table-of-contents a:hover {  
+    box-shadow: 0 0 3.5rem rgb(0,0,0,0.35); 
+    background-color: #E3B5A459;
+    padding: 0.25rem 0.75rem;
+}
+.table-of-contents a.level-1 { font-size: 1.17rem; }
+.table-of-contents a.level-2 { text-indent: 2rem; }
+
 /* columns group */
 /* 
     since the algorithm for balancing columns between Firefox and Chrome is different, 
@@ -261,7 +282,7 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
     flex: 1;
     margin: 0;
 }
-.columns-2 figure img { border: 1px solid black; }
+.columns-2 figure img { border: 1px solid grey; }
 /* 
     hardcode ratio of width of desktop (1920px) to mobile (882px) to scale uniformly
     1920 / 882 = 320 / 147 ~ 2.1768707482993
@@ -308,7 +329,8 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
     background-color: #773344; 
     color: white;
 }
-.secondary, .background { background-color: #E3B5A4; }
+.secondary { background-color: #E3B5A4; }
+.background { background-color: #F5E9E2; }
 .footer {
     background-color: #3A3335;
     color: white;
@@ -339,7 +361,7 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
     /*.columns-3 { columns: 1; }*/
     .columns-2, .columns-3 { flex-direction: column; }
     .gallery .container { columns: 1; }
-    #assignment-footer-field { display: none; }
+    #assignment-footer-field, #date-footer-field { display: none; }
 }
 /* tablet */
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -348,4 +370,5 @@ nav a:hover, nav .selected { background-size: 100% 100%; }
     .columns-3 .element {
         flex: 1 1 45%;
     }
+    #date-footer-field { display: none; }
 }
