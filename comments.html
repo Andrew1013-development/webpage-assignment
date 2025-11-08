@@ -299,8 +299,8 @@
                         To achieve such a feat, while also integrating various custom elements the Markdown format doesn't natively support, modern CSS techniques are used for layout:
                     </p>
                     <ul>
-                        <li>Flexbox: Used to create dynamically adjustable columns / rows. The <code>nav</code> bar is a great demonstrator of such a capability, dividing each element evenly across the entire width.</li>
-                        <li>CSS Columns: Used to create dynamic, magazine-style layouts.</li>
+                        <li><b>Flexbox:</b> Used to create dynamically adjustable columns / rows. The <code>nav</code> bar is a great demonstrator for such a capability, dividing each element evenly across the entire width.</li>
+                        <li><b>CSS Columns:</b> Used to create dynamic, magazine-style layouts. The utlity class <code>.columns-2</code> is a great demonstrator of this technique.</li>
                     </ul>
                     <h2>b. Design</h2>
                     <p>
@@ -319,7 +319,7 @@
                     <p>
                         Another key design element can be found in the banners at the top of the content pages. 
                         A semi-transparent dark gradient set at 35% transparency is layered on top of the background image of each banner.
-                        This technique ensures contrast and readability between the white page title and the banner's background image, no matter what image is used.
+                        This technique increases contrast and readability between the white page title and the banner's background image, no matter what image is used.
                     </p>
                     <h2>c. Typography</h2>
                     <p>This website uses 3 fonts for various purposes:</p>
@@ -377,15 +377,15 @@
                     <p>On this website, <code>alt</code> attributes are used to provide specific context for every image, following the principle that alt text should describe the image's purpose.</p>
                     <ul>
                         <li>
-                            Identity and Context: 
+                            <b>Identity and Context:</b> 
                             On the "Home" page, the profile image's alt text is <q cite="index.html">A profile picture of Tran Viet Huy...</q>. On the "My Past" page, images in the timeline are described in context, such as <q cite="past.html">A graduation photo of the Tran Khai Nguyen High School class...</q><br>
                         </li>
                         <li>
-                            Representing Concepts: 
+                            <b>Representing Concepts:</b> 
                             On the "My Future" page, images for each aspiration are described, such as <q cite="future.html">The logo for the ICPC Foundation...</q> or <q cite="future.html">A flowchart diagram illustrating a roadmap for learning operating system development...</q><br>
                         </li>
                         <li>
-                            Evidence and Diagrams: 
+                            <b>Evidence and Diagrams:</b> 
                             On this "Comments" page, all figures have descriptive alt text to explain what they demonstrate, such as <q cite="comments.html">A screenshot of the website's homepage, demonstrating the single-column responsive layout for mobile devices.</q>
                         </li>
                     </ul>
@@ -404,7 +404,7 @@
                     <h1>&sect;5. Rounds of Testing</h1>
                     <h2>a. Local end-to-end testing</h2>
                     <p>
-                        Initial testing was performed locally by opening the index.html file directly in multiple web browsers (Safari, Google Chrome, Mozilla Firefox) across 3 different devices.<br>
+                        Initial testing was performed locally by opening the <code>index.html</code> file directly in multiple web browsers (Safari, Google Chrome, Mozilla Firefox) across 3 different devices.<br>
                         This procedure involved:
                     </p>
                     <ul>
@@ -416,17 +416,17 @@
                     <h2>b. Validation</h2>
                     <h3>HTML / CSS validators</h3>
                     <p>
-                        All HTML files (index.html, past.html, future.html and comments.html) were processed through the W3C Markup Validation Service. 
-                        The CSS stylesheet websystems.css was validated with the help of the W3C CSS Validation Service (Jigsaw).
-                        These validation checks ensure the entire site is built with valid and standards-compliant code, essential for cross-browser compatibility.
+                        All HTML files (<code>index.html</code>, <code>past.html</code>, <code>future.html</code> and <code>comments.html</code>) were processed through the <a href="https://validator.w3.org/">W3C Markup Validation Service</a>. 
+                        The CSS stylesheet websystems.css was validated with the help of the <a href="https://jigsaw.w3.org/css-validator">W3C CSS Validation Service (Jigsaw)</a>.
+                        These validation checks verify that the entire site is built with valid and standards-compliant code, essential for cross-browser compatibility.
                     </p>
                     <h3>Accessibility validators</h3>
                     <p>
-                        The site was evaluated using browser-based accessibility tools (such as the WAVE Web Accessibility Evaluation Tool). 
+                        The site was evaluated using browser-based accessibility tools (such as the <a href="https://wave.webaim.org/">WAVE Web Accessibility Evaluation Tool</a>). 
                         This helped identify and fix potential issues like missing alt text, insufficient color contrast, or an improper heading hierarchy.
                     </p>
                     <h3>EdSTEM submission checker</h3>
-                    <p>As a final validation check, the entire project directory was uploaded to the Website Assignment module, where the submission checker was run to ensure minimal penalties, correct file paths and proper permission settings.</p>
+                    <p>As a final validation check, the entire project directory was uploaded to the Website Assignment module, where the submission checker was run to minimize penalties and check for correct file paths and proper permission settings.</p>
                     <p>With an estimated space constraint of approximately 19MB (checked via running <code>df -h</code> on the terminal session), this check also confirms whether the assignment could fit within the space constraints of the hosting server.</p>
                     <h2>c. Live testing: using GitHub Pages</h2>
                     <p>
@@ -453,57 +453,26 @@
                         <li>Abdelmajid Nidnasser's Personal Portfolio: <a href="https://nidnasser.me/" target="_blank">https://nidnasser.me/</a></li>
                         <li>Notion (Markdown formatting): <a href="https://www.notion.com/" target="_blank">https://www.notion.com/</a></li>
                         <li>GitHub (README formatting): <a href="https://github.com/Andrew1013-development" target="_blank">https://github.com/Andrew1013-development</a></li>
-
+                        <li>Markdown Guide: <a href="https://www.markdownguide.org/">https://www.markdownguide.org/</a></li>
                     </ul>
                     <h2>Tools and technical references</h2>
                     <ul>
-                        <li>
-                            emn178's HTML Encoder / Decoder (used for formatting C++ code in HTML)<br>
-                            <a href="https://emn178.github.io/online-tools/html_encode.html" target="_blank">https://emn178.github.io/online-tools/html_encode.html</a>
-                        </li>
-                        <li>
-                            MDN Web Docs<br>
-                            <a href="https://developer.mozilla.org/en-US/docs/" target="_blank">https://developer.mozilla.org/en-US/docs/</a>
-                        </li>
-                        <li>
-                            Google Fonts - Using variable fonts on the web<br>
-                            <a href="https://fonts.google.com/knowledge/using_variable_fonts_on_the_web" target="_blank">https://fonts.google.com/knowledge/using_variable_fonts_on_the_web</a>
-                        </li>
-                        <li>
-                            Wikipedia - Alt attribute<br>
-                            <a href="https://en.wikipedia.org/wiki/Alt_attribute" target="_blank">https://en.wikipedia.org/wiki/Alt_attribute</a></li>
-                        <li>
-                            BrowserStack - Breakpoints for Responsive Web Design in 2025<br>
-                            <a href="https://www.browserstack.com/guide/responsive-design-breakpoints" target="_blank">https://www.browserstack.com/guide/responsive-design-breakpoints</a>
-                        </li>
+                        <li>emn178 -  <a href="https://emn178.github.io/online-tools/html_encode.html" target="_blank">HTML Encoder / Decoder</a> (used for formatting C++ code in HTML)<br></li>
+                        <li>MDN Web Docs - <a href="https://developer.mozilla.org/en-US/docs/Web#documentation_for_web_developers" target="_blank">Documentation for Web developers</a></li>
+                        <li>Google Fonts - <a href="https://fonts.google.com/knowledge/using_variable_fonts_on_the_web" target="_blank">Using variable fonts on the web</a></li>
+                        <li>Wikipedia - <a href="https://en.wikipedia.org/wiki/Alt_attribute" target="_blank">Alt attribute</a></li>
+                        <li>BrowserStack - <a href="https://www.browserstack.com/guide/responsive-design-breakpoints" target="_blank">Breakpoints for Responsive Web Design in 2025</a></li>
                     </ul>
                     <h2>External images</h2>
                     <ul>
-                        <li>
-                            Ho Chi Minh University of Technology - Transparent logo<br>
-                            <a href="https://hcmut.edu.vn/gioi-thieu/nhan-dien-thuong-hieu">https://hcmut.edu.vn/gioi-thieu/nhan-dien-thuong-hieu</a>
-                        </li>
-                        <li>
-                            Wikipedia - Glen Beck and Betty Snyder program the ENIAC in building 328 at the Ballistic Research Laboratory.jpg<br>
-                            <a href="https://en.wikipedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg" target="_blank">https://en.wikipedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg</a>
-                        </li>
-                        <li>
-                            Freepik - Digital technology wave from connecting dot design, dynamic flowing colorful light<br>
-                            <a href="https://www.freepik.com/free-vector/digital-technology-wave-from-connecting-dot-design-dynamic-flowing-colorful-light_19480803.htm" target="_blank">https://www.freepik.com/free-vector/digital-technology-wave-from-connecting-dot-design-dynamic-flowing-colorful-light_19480803.htm</a>
-                        </li>
-                        <li>
-                            ICPC Global<br>
-                            <a href="https://icpc.global/login" target="_blank">https://icpc.global/login</a>
-                        </li>
-                        <li>
-                            Am I Learning Enough - Advanced Operating System Development Roadmap<br>
-                            <a href="https://mohitmishra786.github.io/amILearningEnough/roadmap/os-dev/knowC/" target="_blank">https://mohitmishra786.github.io/amILearningEnough/roadmap/os-dev/knowC/</a>
-                        </li>
-                        <li>
-                            Pixabay - Technology, Computer, Code image<br>
-                            <a href="https://pixabay.com/photos/technology-computer-code-javascript-1283624/" target="_blank">https://pixabay.com/photos/technology-computer-code-javascript-1283624/</a>
-                        </li>
+                        <li>Ho Chi Minh University of Technology - <a href="https://hcmut.edu.vn/gioi-thieu/nhan-dien-thuong-hieu">Brand identity (transparent logo)</a></li>
+                        <li>Wikipedia - <a href="https://en.wikipedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg" target="_blank">Glen Beck and Betty Snyder program the ENIAC in building 328 at the Ballistic Research Laboratory.jpg</a></li>
+                        <li>Freepik - <a href="https://www.freepik.com/free-vector/digital-technology-wave-from-connecting-dot-design-dynamic-flowing-colorful-light_19480803.htm" target="_blank">Digital technology wave from connecting dot design, dynamic flowing colorful light</a></li>
+                        <li><a href="https://icpc.global/login" target="_blank">ICPC Global</a></li>
+                        <li>Am I Learning Enough - <a href="https://mohitmishra786.github.io/amILearningEnough/roadmap/os-dev/knowC/" target="_blank">Advanced Operating System Development Roadmap</a></li>
+                        <li>Pixabay - <a href="https://pixabay.com/photos/technology-computer-code-javascript-1283624/" target="_blank">Technology, Computer, Code image</a></li>
                     </ul>
+                    <p>The profile biography is quoted directly from this YouTube video: <a href="https://youtu.be/ROMLBio1iCI?si=pkUPXzKZZ88r0dwk&t=563" target="_blank">I made my own Linux Distro (9:23 - 9:28)</a> (FaceDev)</p>
                 </section>
             </div>
         </main>
